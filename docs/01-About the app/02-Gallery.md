@@ -167,6 +167,7 @@
 ### Image 29
 
 ![Image 29](../../static/gallery/29.png)
+The images isn't appearing because it was hosted in in localhost:3000
 
 ---
 
@@ -242,6 +243,22 @@
 
 ---
 
-# There's even more in the website!
+---
+
+### Image 42
+
+![Image 42](../../static/gallery/42.png)
+
+---
+
+---
+
+### Image 43
+
+![Image 43](../../static/gallery/43.png)
+
+---
+
+# There's even more details to see in the website!
 
 _Last updated on June 12, 2025 by Ayman._
