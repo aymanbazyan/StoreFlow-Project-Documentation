@@ -251,11 +251,16 @@ The images isn't appearing because it was hosted in in localhost:3000
 
 ---
 
----
-
 ### Image 43
 
 ![Image 43](../../static/gallery/43.png)
+
+---
+
+### Image 44
+
+![Image 44](../../static/gallery/44.png)
+This chart has fake records for testing purposes, unrelated to other cards.
 
 ---
 

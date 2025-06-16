@@ -15,4 +15,12 @@ It uses PostgreSQL as the database, with secure authentication and administrativ
 
 ---
 
+Demo links
+
+[Pc store template (soon..)](#)
+
+[Books store template (soon..)](#)
+
+---
+
 _Last updated on June 12, 2025 by Ayman._
