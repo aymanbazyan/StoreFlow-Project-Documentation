@@ -264,6 +264,14 @@ This chart has fake records for testing purposes, unrelated to other cards.
 
 ---
 
+---
+
+### Image 45
+
+![Image 45](../../static/gallery/45.png)
+
+---
+
 # There's even more details to see in the website!
 
 _Last updated on June 12, 2025 by Ayman._
