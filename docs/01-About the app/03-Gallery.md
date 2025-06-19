@@ -264,11 +264,15 @@ This chart has fake records for testing purposes, unrelated to other cards.
 
 ---
 
----
-
 ### Image 45
 
 ![Image 45](../../static/gallery/45.png)
+
+---
+
+### Image 46
+
+![Image 46](../../static/gallery/46.png)
 
 ---
 
