@@ -91,7 +91,7 @@ const config = {
             position: "left",
             label: "Tutorial",
           },
-          { to: "/blog", label: "Blog", position: "left" },
+          { to: "#", label: "Blog", position: "left" },
           {
             href: "https://store-flow-project-documentation.vercel.app",
             label: "GitHub",
@@ -133,7 +133,7 @@ const config = {
             items: [
               {
                 label: "Blog",
-                to: "/blog",
+                to: "#",
               },
               {
                 label: "GitHub",
