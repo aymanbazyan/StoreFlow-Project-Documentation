@@ -1,3 +1,17 @@
+# Demo Links and Gallery
+
+---
+
+# Demo links
+
+[Pc store template (EN) (soon..)](#)
+
+[Books store template (AR) (soon..)](#)
+
+---
+
+# Gallery
+
 ### Image 1
 
 ![Image 1](../../static/gallery/1.png)

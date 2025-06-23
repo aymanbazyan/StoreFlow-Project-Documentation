@@ -3,7 +3,7 @@ sidebar_position: 1
 slug: /category/about-the-app
 ---
 
-# About
+# About the App
 
 ---
 
@@ -12,14 +12,6 @@ Storeflow is a Next.js e-store that is easily editable and can be used for diffe
 I implemented a feature-rich admin panel where most things in the store are adjustable (e.g., categories, products, theme colors, etc.).
 
 It uses PostgreSQL as the database, with secure authentication and administrative privileges.
-
----
-
-Demo links
-
-[Pc store template (EN) (soon..)](#)
-
-[Books store template (AR) (soon..)](#)
 
 ---
 
