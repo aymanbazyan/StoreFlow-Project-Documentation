@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-slug: /
+slug: /category/about-the-app
 ---
 
 # About
@@ -17,9 +17,9 @@ It uses PostgreSQL as the database, with secure authentication and administrativ
 
 Demo links
 
-[Pc store template (soon..)](#)
+[Pc store template (EN) (soon..)](#)
 
-[Books store template (soon..)](#)
+[Books store template (AR) (soon..)](#)
 
 ---
 

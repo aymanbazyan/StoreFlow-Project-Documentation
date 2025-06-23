@@ -6,22 +6,29 @@
 
 import { themes as prismThemes } from "prism-react-renderer";
 
+// This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
+
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: "Storeflow",
-  tagline: "Dinosaurs are cool",
+  tagline: "Your best e-store.",
   favicon: "img/favicon.ico",
 
+  // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
+  future: {
+    v4: true, // Improve compatibility with the upcoming Docusaurus v4
+  },
+
   // Set the production url of your site here
-  url: "https://your-docusaurus-site.example.com",
+  url: "https://store-flow-project-documentation.vercel.app",
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: "/",
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: "facebook", // Usually your GitHub org/user name.
-  projectName: "docusaurus", // Usually your repo name.
+  organizationName: "aymanbazyan", // Usually your GitHub org/user name.
+  projectName: "storeflow", // Usually your repo name.
 
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
@@ -43,16 +50,22 @@ const config = {
           sidebarPath: "./sidebars.js",
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          // editUrl:
-          // "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
+          // editUrl: "https://store-flow-project-documentation.vercel.app",
         },
-        // blog: {
-        //   showReadingTime: true,
-        //   // Please change this to your repo.
-        //   // Remove this to remove the "edit this page" links.
-        //   editUrl:
-        //     "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
-        // },
+        blog: {
+          showReadingTime: true,
+          feedOptions: {
+            type: ["rss", "atom"],
+            xslt: true,
+          },
+          // Please change this to your repo.
+          // Remove this to remove the "edit this page" links.
+          // editUrl: "https://store-flow-project-documentation.vercel.app",
+          // Useful options to enforce blogging best practices
+          onInlineTags: "warn",
+          onInlineAuthors: "warn",
+          onUntruncatedBlogPosts: "warn",
+        },
         theme: {
           customCss: "./src/css/custom.css",
         },
@@ -68,7 +81,7 @@ const config = {
       navbar: {
         title: "Storeflow",
         logo: {
-          alt: "My Site Logo",
+          alt: "Storeflow Logo",
           src: "img/storeflowIcon.jpg",
         },
         items: [
@@ -78,9 +91,9 @@ const config = {
             position: "left",
             label: "Tutorial",
           },
-          // { to: "/blog", label: "Blog", position: "left" },
+          { to: "/blog", label: "Blog", position: "left" },
           {
-            href: "https://github.com/aymanbazyan/spring-hardware-nextjs",
+            href: "https://store-flow-project-documentation.vercel.app",
             label: "GitHub",
             position: "right",
           },
@@ -94,7 +107,7 @@ const config = {
             items: [
               {
                 label: "Tutorial",
-                to: "/docs/",
+                to: "/docs/category/about-the-app",
               },
             ],
           },
@@ -103,15 +116,15 @@ const config = {
             items: [
               {
                 label: "Stack Overflow",
-                href: "https://stackoverflow.com/users/21908210/krabby4j",
+                href: "https://stackoverflow.com/users/",
               },
               {
                 label: "Discord",
-                href: "https://discordapp.com/users/1315314290147721256",
+                href: "https://discordapp.com/users/",
               },
               {
                 label: "Twitter",
-                href: "https://x.com/Krabby67260014",
+                href: "https://x.com/",
               },
             ],
           },
@@ -120,11 +133,11 @@ const config = {
             items: [
               {
                 label: "Blog",
-                to: "/",
+                to: "/blog",
               },
               {
                 label: "GitHub",
-                href: "https://github.com/aymanbazyan/",
+                href: "https://store-flow-project-documentation.vercel.app",
               },
             ],
           },

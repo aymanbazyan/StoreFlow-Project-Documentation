@@ -1,43 +1,46 @@
-import clsx from 'clsx';
-import Heading from '@theme/Heading';
-import styles from './styles.module.css';
+import clsx from "clsx";
+import Heading from "@theme/Heading";
+import styles from "./styles.module.css";
 
 const FeatureList = [
   {
-    title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    title: "Powerful Admin Panel",
+    Svg: require("@site/static/img/analytics.svg").default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        Storeflow includes a feature-rich admin panel for effortless management.
+        Adjust products, categories, sales, promoted items, and even theme
+        colors from one central dashboard.
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    title: "Modern User Experience",
+    Svg: require("@site/static/img/modern-desktop-computer.svg").default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        Built with Next.js, Storeflow offers a beautiful and simple interface.
+        It features an advanced search, filter, and sort menu to help customers
+        find exactly what they need.
       </>
     ),
   },
   {
-    title: 'Powered by React',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    title: "Secure and Robust",
+    Svg: require("@site/static/img/security.svg").default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        Using a PostgreSQL database for reliability, Storeflow ensures your data
+        is safe. It has secure authentication and administrative privileges to
+        protect your store and operations.
       </>
     ),
   },
 ];
 
-function Feature({Svg, title, description}) {
+function Feature({ Svg, title, description }) {
   return (
-    <div className={clsx('col col--4')}>
+    <div className={clsx("col col--4")}>
       <div className="text--center">
         <Svg className={styles.featureSvg} role="img" />
       </div>

@@ -2,7 +2,7 @@
 
 ---
 
-> ## Enviorment
+> ## Enviorment variables
 
 You can create the **config.env** here:
 
@@ -14,25 +14,25 @@ You can create the **config.env** here:
 | Row 1    | Data     | -->
 
 ```javascript
-#// Genreal
-NEXT_PUBLIC_NODE_ENV='development' #// or production
+# Genreal
+NEXT_PUBLIC_NODE_ENV='development' # or production
 APP_BASE_URL="http://localhost:3000"
 
-#// Auth
+# Auth
 JWT_SECRET="your-very-strong-jwt-secret-key-here-at-least-32-characters"
-#// Session duration. Use 's', 'm', 'h', or 'd'. Examples: "60s", "1m", "2h", "7d"
+// Session duration. Use 's', 'm', 'h', or 'd'. Examples: "60s", "1m", "2h", "7d"
 SESSION_DURATION=7d
 SHORT_LIVED_TOKEN_HOURS=1
 
-#// Database, check the previous page
+# Database, check the previous page
 DATABASE_URL="postgresql://username:password@localhost:5432/your_database_name"
 
-#// Email, you can get the mail and pass from any service
+# Email, you can get the mail and pass from any service
 SERVICE=gmail
 EMAIL_MAIL=example@gmail.com
 EMAIL_PASS=fdoa kgsa bmrw asnt
 
-#// Checkout (the user can checkout 3 times in 1 hour)
+# Checkout (the user can checkout 3 times in 1 hour)
 CHECKOUT_LIMIT=3
 CHECKOUT_LIMIT_RESET_TIME=3600000 # 1 hour
 ```
@@ -45,17 +45,27 @@ Make sure you replace `JWT_SECRET`, `DATABASE_URL`, `APP_BASE_URL`, `NEXT_PUBLIC
 
 ---
 
-# 3. Connect the app to the database and initialize the schemas
+> ## Deploy schemas
+
+Connect the app to the database and initialize the schemas:-
 
 Open your terminal and run these.
 
-```javascript
+```
 npm run prisma:init
 npm run prisma:migrate:dev
 npm run prisma:generate
 npm run prisma:push
 ```
 
+you might also want to grant files mutating premission to your app (to mutate the items' images).
+
+```
+sudo chown -R aymen:aymen public/uploads
+```
+
+Replace `aymen` with the actual user (your operating system user).
+
 ---
 
-_Last updated on June 12, 2025 by Ayman._
+_Last updated on June 23, 2025 by Ayman._
