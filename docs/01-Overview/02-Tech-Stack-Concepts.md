@@ -296,6 +296,7 @@ Here is a comprehensive breakdown of the project's architecture:
   - `dev.db`: **(Untracked)** A local SQLite database file, likely used for development.
 
 - **`public/`**: Stores static assets that are publicly accessible from the root URL.
+- **`uploads/`**: Stores assets of the store's items.
 
   - `icon.png`: Application icon, likely used as a favicon.
 
@@ -320,6 +321,7 @@ Here is a comprehensive breakdown of the project's architecture:
     - **`api/`**: Backend API endpoints (Route Handlers).
       - `auth/`: Handles user authentication (login, signout, session check).
       - `backup/`: API endpoint to trigger a server backup.
+      - `uploads/[...path]`: API endpoint to get uploaded files.
       - `cron/`: Endpoints designed to be called by scheduled jobs (e.g., cleanup tasks).
       - `tables/`: A generic, dynamic API for performing CRUD operations on database tables, likely used by the admin panel.
       - `user/`: API routes for user-specific actions like managing wishlists and orders.

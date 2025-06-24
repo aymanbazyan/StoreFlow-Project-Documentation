@@ -4,7 +4,7 @@
 
 > ## Enviorment variables
 
-You can create the **config.env** here:
+You can create the **.env.local** here:
 
 - Storeflow folder
   - .env.local
