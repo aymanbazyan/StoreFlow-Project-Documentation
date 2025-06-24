@@ -11,8 +11,13 @@ import { themes as prismThemes } from "prism-react-renderer";
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: "Storeflow",
-  tagline: "Your best e-store.",
+  tagline: "Your finest online store",
   favicon: "img/favicon.ico",
+
+  markdown: {
+    mermaid: true,
+  },
+  themes: ["@docusaurus/theme-mermaid"],
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
@@ -50,7 +55,7 @@ const config = {
           sidebarPath: "./sidebars.js",
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          // editUrl: "https://store-flow-project-documentation.vercel.app",
+          // editUrl: "https://github.com/aymanbazyan/StoreFlow-Project-Documentation",
         },
         blog: {
           showReadingTime: true,
@@ -60,7 +65,7 @@ const config = {
           },
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          // editUrl: "https://store-flow-project-documentation.vercel.app",
+          // editUrl: "https://github.com/aymanbazyan/StoreFlow-Project-Documentation",
           // Useful options to enforce blogging best practices
           onInlineTags: "warn",
           onInlineAuthors: "warn",
@@ -93,7 +98,7 @@ const config = {
           },
           { to: "#", label: "Blog", position: "left" },
           {
-            href: "https://store-flow-project-documentation.vercel.app",
+            href: "https://github.com/aymanbazyan/StoreFlow-Project-Documentation",
             label: "GitHub",
             position: "right",
           },
@@ -137,7 +142,7 @@ const config = {
               },
               {
                 label: "GitHub",
-                href: "https://store-flow-project-documentation.vercel.app",
+                href: "https://github.com/aymanbazyan/StoreFlow-Project-Documentation",
               },
             ],
           },

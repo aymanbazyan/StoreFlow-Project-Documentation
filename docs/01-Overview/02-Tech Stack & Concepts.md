@@ -1,3 +1,0 @@
-# Tech Stack & Concepts
-
-soon...
