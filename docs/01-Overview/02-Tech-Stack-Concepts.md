@@ -175,6 +175,7 @@ model Gallery {
 model Themes {
   slug           String   @id @default("general") @db.VarChar(50)
   themeStringObj Json     @default("{\"primary\":\"blue\",\"secondary\":\"violet\"}")
+  headerTextColor String?  @default("black") @db.VarChar(100)
   img            String?  @default("") @db.VarChar(255)
   created_at     DateTime @default(now())
 }
