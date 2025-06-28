@@ -70,7 +70,7 @@ model Categories {
   Products    Products[]
 
   @@index([is_featured])
-  @@index([name])
+  @@index([name]) // For category name searches/sorting
 }
 
 model Config {
@@ -105,7 +105,7 @@ model Products {
   orderItems         OrderItems[]
   related_products   Products[] @relation("ProductRelations")
   related_to         Products[] @relation("ProductRelations")
-  related_in_sets    Sets[]     @relation("ProductSetRelations")
+  setComponents      SetComponents[]
   @@index([category])
   @@index([featured_promotion])
   @@index([top_selling])
@@ -131,11 +131,10 @@ model Sets {
   created_at         DateTime   @default(now())
   price              Float      @default(0) @db.DoublePrecision
   discount           Float      @default(0) @db.DoublePrecision
-  quantity           Int        @default(0) @db.SmallInt
   items_sold         Int        @default(0) @db.SmallInt
   featured_promotion Boolean    @default(false)
   top_selling        Boolean    @default(false)
-  components         Products[] @relation("ProductSetRelations")
+  components         SetComponents[]
   orderItems         OrderItems[]
   related_products   Sets[]     @relation("SetRelations")
   related_to         Sets[]     @relation("SetRelations")
@@ -145,10 +144,20 @@ model Sets {
   @@index([created_at])
   @@index([price])
   @@index([discount])
-  @@index([quantity])
   @@index([items_sold])
   @@index([featured_promotion])
   @@index([top_selling])
+}
+
+model SetComponents {
+  setSlug    String @db.VarChar(100)
+  productSlug String @db.VarChar(100)
+  quantity   Int    @db.SmallInt // The quantity of this product needed for one set
+
+  set     Sets     @relation(fields: [setSlug], references: [slug], onDelete: Cascade)
+  product Products @relation(fields: [productSlug], references: [slug], onDelete: Cascade)
+
+  @@id([setSlug, productSlug])
 }
 
 model Team {
@@ -175,7 +184,7 @@ model Gallery {
 model Themes {
   slug           String   @id @default("general") @db.VarChar(50)
   themeStringObj Json     @default("{\"primary\":\"blue\",\"secondary\":\"violet\"}")
-  headerTextColor String?  @default("black") @db.VarChar(100)
+  headerTextColor String?  @default("text-black") @db.VarChar(100)
   img            String?  @default("") @db.VarChar(255)
   created_at     DateTime @default(now())
 }
@@ -218,8 +227,8 @@ model Orders {
 model OrderItems {
   slug         String  @id @default(cuid())
   order_slug   String  @db.VarChar(100)
-  product_slug String? @db.VarChar(100)
-  set_slug     String? @db.VarChar(100)
+  product_slug String? @db.VarChar(100) // Made optional
+  set_slug     String? @db.VarChar(100) // New field for sets
   item_type    String  @db.VarChar(20) // "product" or "set"
   quantity     Int     @db.SmallInt
   unit_price   Decimal @db.Decimal(10, 2) // Price at time of order
@@ -247,14 +256,16 @@ model DiscountCodes {
 
   // Usage limits
   max_uses          Int?    @db.SmallInt // Total times code can be used (0 = unlimited)
-  used_count        Int     @default(0) @db.SmallInt
+  used_count        Int     @default(0) @db.SmallInt // How many times it's been used
 
-  minimum_order_amount Decimal? @db.Decimal(10, 2)
+  // Minimum requirements
+  minimum_order_amount Decimal? @db.Decimal(10, 2) // Minimum cart value to apply
 
+  // Status and metadata
   is_active Boolean @default(true)
 
   // Relations
-  orders             Orders[]            @relation("OrderDiscountCode")
+  orders             Orders[]            @relation("OrderDiscountCode") // Track which orders used this code
 
   @@index([slug])
   @@index([is_active])
