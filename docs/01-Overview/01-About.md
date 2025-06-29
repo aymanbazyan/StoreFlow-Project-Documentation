@@ -15,4 +15,78 @@ It uses PostgreSQL as the database, with secure authentication and administrativ
 
 ---
 
-_Last updated on June 12, 2025 by Ayman._
+### **Storeflow E-commerce Platform: Core Features**
+
+Storeflow is a comprehensive e-commerce platform designed with a powerful admin dashboard for store management and a user-friendly storefront for an excellent customer experience.
+
+---
+
+### **1. Admin Dashboard (Store Management)**
+
+Admins have full control over the store's products, sales, and appearance.
+
+#### **Product & Inventory**
+
+- **Product Management:** Easily create, edit, and delete products, categories, and product bundles (sets).
+- **Inventory Control:** Set stock levels, including "out-of-stock" and "unlimited" options. Stock is automatically updated when sets are sold.
+- **Rich Content:** Use a full text editor for detailed descriptions and upload both images and videos for products.
+
+#### **Sales & Orders**
+
+<!-- - **Real-time Notifications:** See new orders appear instantly without needing to refresh the page. -->
+
+- **Financial Dashboard:** Track sales, profits, and key financial metrics.
+- **Order Management:** View, approve, or reject incoming orders. Admins can add a note explaining a rejection.
+- **Manual Order Entry:** Log offline or in-store purchases, which automatically updates inventory and sales data.
+
+#### **Marketing & Promotions**
+
+- **Discount Codes:** Create and manage custom discount codes for customers.
+- **Promotions:** Run sitewide sales and feature promotional items on the storefront.
+
+#### **Store Customization**
+
+- **Homepage Content:** Control featured categories, the main banner, and a gallery for store photos.
+- **Shipping Rules:** Set custom shipping fees based on customer regions.
+- **Site Information:** Easily update general content like team members and partners.
+
+---
+
+### **2. Customer Storefront (Shopping Experience)**
+
+A clean and intuitive interface for customers to browse, shop, and purchase.
+
+#### **Browsing & Discovery**
+
+<!-- - **Improved Loading:** Skeleton screens provide a faster, smoother browsing experience. -->
+
+- **Powerful Search:** A prominent search bar helps customers quickly find any product.
+- **Advanced Filtering:** Sort and filter products by category, price, and other criteria.
+
+#### **Shopping & Checkout**
+
+- **Dynamic Shopping Cart:** A sidebar cart lets users easily view and manage their selected items.
+- **Seamless Checkout:** A streamlined, multi-step process for placing orders.
+- **Payment Options:** Includes Cash on Delivery, with planned support for **Credit Card** and **PayPal**.
+- **Printable Invoices:** Customers can generate and print PDF invoices for their orders.
+- **Automated Email Notifications:** Customers automatically receive emails for important order updates (e.g., confirmation, rejection, admin's notes).
+
+---
+
+### **3. User Accounts**
+
+A dedicated area for registered customers to manage their activity.
+
+<!-- , with upcoming support for **Google Social Login**. -->
+
+- **Secure Authentication:** Standard email/password login.
+- **Personal Dashboard:** A central "My Account" page to manage personal info, wishlists, and orders.
+- **Order History & Control:** View all past orders and their current status (e.g., pending, approved). Customers can also cancel a recently placed order.
+- **Wishlist:** Save favorite products for later purchase.
+- **Email Confirmation:** Customer receive confirmation code on his email.
+
+---
+
+#### **And there's more!**
+
+_Last updated on June 29, 2025 by Ayman._

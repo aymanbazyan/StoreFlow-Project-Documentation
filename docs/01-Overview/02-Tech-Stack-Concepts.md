@@ -227,8 +227,8 @@ model Orders {
 model OrderItems {
   slug         String  @id @default(cuid())
   order_slug   String  @db.VarChar(100)
-  product_slug String? @db.VarChar(100) // Made optional
-  set_slug     String? @db.VarChar(100) // New field for sets
+  product_slug String? @db.VarChar(100)
+  set_slug     String? @db.VarChar(100)
   item_type    String  @db.VarChar(20) // "product" or "set"
   quantity     Int     @db.SmallInt
   unit_price   Decimal @db.Decimal(10, 2) // Price at time of order
@@ -314,7 +314,7 @@ Here is a comprehensive breakdown of the project's architecture:
 
 - **`setup-files/`**: Contains utility scripts for project setup or maintenance.
 
-  - `makeAdmin.js`: A script to grant admin privileges to a user.
+  - `toggleAdmin.js`: A script to grant/revoke admin privileges from a user.
   - `seedFakePosts.js`: A script to populate the database with dummy data for testing.
 
 - **`src/`**: The main source code for the entire application.

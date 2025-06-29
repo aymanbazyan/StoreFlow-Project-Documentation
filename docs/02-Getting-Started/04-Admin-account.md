@@ -15,7 +15,7 @@ You'll recieve an email to verify the account.
 After your account is created, open your terminal and run this:
 
 ```
-npm run make-admin -- <username>
+npm run toggle-admin -- <username>
 ```
 
 Replace the `<username>` with your email's username
